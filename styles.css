@@ -918,13 +918,13 @@ html {
 }
 
 .cta-demo-badge {
-    background: white;
-    color: #7c3aed;
+    background: black;
+    color: white;
     border-radius: 2rem;
     padding: 0.7rem 2.5rem;
     font-size: 1.15rem;
     font-weight: 500;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    box-shadow: 0 2px 8px rgba(182, 182, 182, 0.05);
     display: flex;
     align-items: center;
     gap: 0.7rem;
@@ -989,10 +989,15 @@ html {
     border-radius: 2rem;
     font-size: 1.15rem;
     font-weight: 700;
-    padding: 1.1rem 0;
+    padding: 1.1rem 1.2rem;
     margin-top: 1rem;
     box-shadow: none;
     border: none;
+    display: block;
+    margin: 1rem auto 0 auto;
+    width: 100%;
+    max-width: 420px;
+    min-width: 220px;
 }
 
 .cta-demo-benefits {
@@ -1000,6 +1005,14 @@ html {
     text-align: center;
     font-size: 1.05rem;
     color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+    flex-direction: row;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-benefit {
@@ -1013,14 +1026,6 @@ html {
     width: 100%;
     align-items: flex-start;
     justify-content: center;
-}
-
-.cta-demo-benefits {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    min-width: 320px;
 }
 
 .cta-benefit-card {
@@ -1134,4 +1139,4 @@ html {
     100% {
         transform: scale(1);
     }
-} 
+}
