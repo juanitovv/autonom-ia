@@ -1,0 +1,97 @@
+<!-- Google Analytics 4 (GA4) -->
+<!-- Reemplaza GA_MEASUREMENT_ID con tu ID de medición real -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'GA_MEASUREMENT_ID', {
+    page_title: 'Autonom.IA - Automatización e IA para PyMEs',
+    page_location: window.location.href,
+    custom_map: {
+      'custom_parameter_1': 'user_type',
+      'custom_parameter_2': 'industry'
+    }
+  });
+</script>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager -->
+
+<!-- Facebook Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', 'FB_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=FB_PIXEL_ID&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel -->
+
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+_linkedin_partner_id = "LINKEDIN_PARTNER_ID";
+window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+</script><script type="text/javascript">
+(function(l) {
+if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+window.lintrk.q=[]}
+var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})(window.lintrk);
+</script>
+<noscript>
+<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=LINKEDIN_PARTNER_ID&fmt=gif" />
+</noscript>
+<!-- End LinkedIn Insight Tag -->
+
+<!-- Instructions for setup -->
+<!--
+INSTRUCCIONES DE CONFIGURACIÓN:
+
+1. GOOGLE ANALYTICS 4:
+   - Reemplaza 'GA_MEASUREMENT_ID' con tu ID de medición real (formato: G-XXXXXXXXXX)
+   - Ejemplo: 'G-ABC123DEF4'
+
+2. GOOGLE TAG MANAGER:
+   - Reemplaza 'GTM-XXXXXXX' con tu ID de GTM real
+   - Ejemplo: 'GTM-ABC123D'
+
+3. FACEBOOK PIXEL:
+   - Reemplaza 'FB_PIXEL_ID' con tu ID de pixel real
+   - Ejemplo: '123456789012345'
+
+4. LINKEDIN INSIGHT TAG:
+   - Reemplaza 'LINKEDIN_PARTNER_ID' con tu ID de partner real
+   - Ejemplo: '1234567'
+
+5. IMPLEMENTACIÓN:
+   - Copia este código en el <head> de tu index.html
+   - Asegúrate de reemplazar todos los IDs de ejemplo con los reales
+   - Prueba que los eventos se estén registrando correctamente
+
+6. EVENTOS PERSONALIZADOS RECOMENDADOS:
+   - 'contact_form_submit'
+   - 'consultation_request'
+   - 'case_study_view'
+   - 'service_interest'
+--> 
