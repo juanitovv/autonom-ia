@@ -1397,7 +1397,7 @@ img {
 .identificacion-icon {
     width: 56px !important;
     height: 56px !important;
-    background: var(--gradient-primary) !important;
+    background: var(--gradient-secondary) !important;
     border-radius: 50% !important;
     font-size: 1.5rem !important;
 }
