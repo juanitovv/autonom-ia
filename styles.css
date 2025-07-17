@@ -1274,3 +1274,210 @@ img {
     width: auto !important;
     margin: 0 !important;
 }
+
+/* ============================================
+   FIX PARA CARDS 
+============================================ */
+
+/* Estilos base para todas las cards */
+.service-card,
+.industry-card,
+.identificacion-card,
+.process-card,
+.faq-item {
+    background: white !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+    border: 1px solid #e5e7eb !important;
+    transition: all 0.3s ease !important;
+    margin-bottom: 2rem !important;
+    display: block !important;
+    width: 100% !important;
+}
+
+/* PADDING ESPECÍFICO PARA CADA TIPO */
+.service-card,
+.industry-card,
+.process-card {
+    padding: 2rem !important;
+}
+
+.identificacion-card {
+    padding: 2.5rem 2rem 2rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+}
+
+.industry-card {
+    text-align: center !important;
+}
+
+.process-card {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.faq-item {
+    padding: 0 !important;
+    overflow: hidden !important;
+}
+
+/* HOVER EFFECTS */
+.service-card:hover,
+.industry-card:hover,
+.identificacion-card:hover,
+.process-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
+
+/* GRIDS ESTANDARIZADOS */
+.services-grid,
+.industries-grid,
+.identificacion-grid,
+.process-grid {
+    display: grid !important;
+    gap: 2rem !important;
+    margin-top: 2rem !important;
+}
+
+.services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+}
+
+.industries-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+}
+
+.identificacion-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    max-width: 1100px !important;
+    margin: 0 auto !important;
+}
+
+.process-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+    margin-top: 3rem !important;
+}
+
+/* ICONOS Y NÚMEROS ESTANDARIZADOS */
+.service-icon,
+.industry-icon,
+.identificacion-icon,
+.process-number {
+    margin-bottom: 1.5rem !important;
+    flex-shrink: 0 !important;
+    color: white !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.service-icon {
+    width: 60px !important;
+    height: 60px !important;
+    background: var(--gradient-primary) !important;
+    border-radius: 1rem !important;
+    font-size: 1.5rem !important;
+}
+
+.industry-icon {
+    width: 80px !important;
+    height: 80px !important;
+    background: var(--gradient-secondary) !important;
+    border-radius: 50% !important;
+    font-size: 2rem !important;
+    margin: 0 auto 1.5rem !important;
+}
+
+.identificacion-icon {
+    width: 56px !important;
+    height: 56px !important;
+    background: var(--gradient-primary) !important;
+    border-radius: 50% !important;
+    font-size: 1.5rem !important;
+}
+
+.process-number {
+    width: 60px !important;
+    height: 60px !important;
+    background: var(--gradient-primary) !important;
+    border-radius: 50% !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    margin: 0 auto 1.5rem !important;
+}
+
+/* TÍTULOS ESTANDARIZADOS */
+.service-card h3,
+.industry-card h3,
+.identificacion-card h3,
+.process-card h3 {
+    font-weight: 600 !important;
+    margin-bottom: 1rem !important;
+    color: #1f2937 !important;
+}
+
+.service-card h3 {
+    font-size: 1.5rem !important;
+}
+
+.industry-card h3 {
+    font-size: 1.25rem !important;
+}
+
+.identificacion-card h3 {
+    font-size: 1.15rem !important;
+    font-weight: 700 !important;
+}
+
+.process-card h3 {
+    font-size: 1.25rem !important;
+}
+
+/* PÁRRAFOS ESTANDARIZADOS */
+.service-card p,
+.industry-card p,
+.identificacion-card p,
+.process-card p {
+    color: #6b7280 !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+}
+
+.industry-card p {
+    font-size: 0.9rem !important;
+}
+
+.identificacion-card p {
+    font-size: 1rem !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .service-card,
+    .industry-card,
+    .identificacion-card,
+    .process-card {
+        padding: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .services-grid,
+    .industries-grid,
+    .identificacion-grid,
+    .process-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+    
+    .process-number {
+        width: 50px !important;
+        height: 50px !important;
+        font-size: 1.1rem !important;
+    }
+}
