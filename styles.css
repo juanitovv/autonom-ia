@@ -1140,3 +1140,54 @@ html {
         transform: scale(1);
     }
 }
+
+/* Estilos adicionales para el menú móvil - Agregar al final de styles.css */
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 1rem 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-top: 1px solid var(--border-color);
+        z-index: 999;
+    }
+
+    .nav-links.mobile-open {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid var(--border-color);
+        transition: background-color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+        background-color: var(--bg-light);
+    }
+
+    .nav-links a.nav-cta {
+        margin: 1rem 2rem;
+        border-radius: 0.5rem;
+        border-bottom: none;
+        text-align: center;
+    }
+
+    /* Asegurar que el nav tenga position relative */
+    .nav {
+        position: relative;
+    }
+}
