@@ -382,6 +382,149 @@
 
         // Envío del formulario
         demoForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+    
+        // Validar todos los campos
+        let isValid = true;
+        inputs.forEach(input => {
+            validateField({ target: input });
+            if (input.parentNode.querySelector('.field-error')) {
+                isValid = false;
+            }
+        });
+
+        if (!isValid) {
+            trackEvent('form_validation_error');
+            return;
+        }
+
+        // Preparar datos del formulario
+        const formData = {
+            nombre: demoForm.nombre.value.trim(),
+            email: demoForm.email.value.trim(),
+            telefono: demoForm.telefono.value.trim(),
+            tipo_negocio: demoForm.tipo_negocio.value,
+            empleados: demoForm.empleados.value,
+            timestamp: new Date().toISOString(),
+            source: 'autonomia.mx',
+            page_url: window.location.href
+        };
+
+        // Mostrar estado de carga
+        const submitBtn = demoForm.querySelector('.cta-demo-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
+
+        // Enviar a webhook de n8n
+        fetch('https://primary-production-dbcd.up.railway.app/webhook/lead-capture', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            return response.json();
+        })
+        .then(data => {
+            // Envío exitoso
+            console.log('Datos enviados exitosamente:', data);
+            handleFormSuccess(formData);
+        })
+        .catch(error => {
+            console.error('Error enviando formulario:', error);
+            handleFormError();
+        })
+        .finally(() => {
+            // Restaurar botón
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
+    });
+
+    function handleFormError() {
+        // Mostrar mensaje de error
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'cta-demo-error-msg';
+        errorMsg.style.cssText = `
+            background: #ef4444;
+            color: white;
+            border-radius: 1.2rem;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            max-width: 480px;
+            margin: 1rem auto 0 auto;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+        `;
+        errorMsg.innerHTML = `
+            <div style="display:flex;flex-direction:column;align-items:center;">
+                <span style="font-size:1.5rem;display:block;margin-bottom:0.5rem;">⚠️</span>
+                <strong>Hubo un problema al enviar tu información</strong><br>
+                <span style="font-weight:400;">Por favor intenta nuevamente o contáctanos directamente por WhatsApp al +52 55 5611096935</span>
+            </div>
+        `;
+    
+        const demoForm = document.querySelector('#demoForm');
+        demoForm.parentNode.insertBefore(errorMsg, demoForm.nextSibling);
+    
+        // Remover mensaje de error después de 8 segundos
+        setTimeout(() => {
+            errorMsg.remove();
+        }, 8000);
+
+        trackEvent('demo_form_error');
+    }
+
+    function handleFormSuccess(formData) {
+        // Crear mensaje de confirmación (mantiene el comportamiento actual)
+        const confirmMsg = document.createElement('div');
+        confirmMsg.className = 'cta-demo-confirm-msg';
+        confirmMsg.innerHTML = `
+            <div style="width:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+                <span style="font-size:2.1rem;display:block;margin-bottom:0.7rem;">🎉</span>
+                <strong style="font-size:1.35rem;">¡Gracias por tu interés!</strong><br>
+                <span style="font-weight:400;">Hemos recibido tu información correctamente.<br>Nos pondremos en contacto contigo a la brevedad para coordinar tu demo gratuita en el horario que mejor te convenga.</span>
+            </div>
+        `;
+    
+        const demoForm = document.querySelector('#demoForm');
+    
+        // Insertar mensaje
+        demoForm.parentNode.insertBefore(confirmMsg, demoForm);
+    
+        // Ocultar formulario
+        demoForm.style.display = 'none';
+    
+        // Scroll suave al mensaje
+        confirmMsg.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        });
+
+        // Analytics
+        trackEvent('demo_form_submitted', {
+            tipo_negocio: formData.tipo_negocio,
+            empleados: formData.empleados,
+            source: 'webhook_success'
+        });
+
+        // Resetear después de 10 segundos
+        setTimeout(function() {
+            confirmMsg.remove();
+            demoForm.reset();
+            demoForm.style.display = '';
+        }, 10000);
+    }
+
+        /*
+        // Envío del formulario
+        demoForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Validar todos los campos
@@ -438,7 +581,7 @@
                 demoForm.reset();
                 demoForm.style.display = '';
             }, 10000);
-        }
+        } */
     }
 
     // ============================================
