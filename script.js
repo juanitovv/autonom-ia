@@ -417,7 +417,7 @@
         submitBtn.disabled = true;
 
         // Enviar a webhook de n8n
-        fetch('https://primary-production-dbcd.up.railway.app/webhook/lead-capture', {
+        fetch('https://n8n.srv942132.hstgr.cloud/webhook/lead-capture', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
