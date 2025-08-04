@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Solicitud - Autonom.IA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f8f9fa;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header {
+            background-color: #ffffff;
+            padding: 30px 20px;
+            text-align: center;
+            color: #333333;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(135deg, #00D4AA, #6B46C1) 1;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            color: #333333;
+        }
+        
+        .logo img {
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+        }
+        
+        .tagline {
+            font-size: 16px;
+            opacity: 0.7;
+            font-weight: 300;
+            color: #666666;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .greeting {
+            font-size: 24px;
+            color: #00D4AA;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .main-text {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            color: #333333;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f0fffe, #f7f3ff);
+            border-left: 4px solid #00D4AA;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box h3 {
+            color: #6B46C1;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .next-steps {
+            background-color: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin: 25px 0;
+        }
+        
+        .next-steps h3 {
+            color: #333333;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .next-steps ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .next-steps li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .next-steps li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #00D4AA;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        .contact-info {
+            background-color: #6B46C1;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .contact-info p {
+            margin-bottom: 10px;
+        }
+        
+        .contact-info a {
+            color: #00D4AA;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer {
+            background-color: #333333;
+            color: #CCCCCC;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .footer a {
+            color: #00D4AA;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 600px) {
+            .content {
+                padding: 25px 20px;
+            }
+            
+            .header {
+                padding: 25px 15px;
+            }
+            
+            .logo {
+                font-size: 24px;
+            }
+            
+            .greeting {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <div class="logo">
+                <img src="https://res.cloudinary.com/dyhfbcqhl/image/upload/v1753819387/logo_fondo_blanco_kxkols.webp" 
+                     alt="Autonom.IA Logo" 
+                     width="60" 
+                     height="60" 
+                     style="margin-bottom: 10px; display: block; margin-left: auto; margin-right: auto; filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));"
+                     onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <!-- Fallback si la imagen no carga -->
+                <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00D4AA, #6B46C1); border-radius: 50%; display: none; align-items: center; justify-content: center; margin: 0 auto 10px auto; font-size: 24px; font-weight: bold; color: white; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">A</div>
+                <div style="font-size: 28px; font-weight: bold; letter-spacing: 1px; color: #333333;">AUTONOM.IA</div>
+            </div>
+            <div class="tagline" style="color: #666666;">Automatización e Inteligencia Artificial para tu negocio</div>
+        </div>
+        
+        <div class="content">
+            <h2 class="greeting">¡Gracias por tu interés!</h2>
+            
+            <p class="main-text">
+                Hemos recibido correctamente tu solicitud para conocer más sobre nuestras soluciones de automatización, UX e inteligencia artificial.
+            </p>
+            
+            <p class="main-text">
+                Nos emociona la posibilidad de ayudarte a <strong>transformar la experiencia de tus clientes</strong> y <strong>optimizar los procesos de tu empresa</strong> de manera práctica y sin complicaciones técnicas.
+            </p>
+            
+            <div class="highlight-box">
+                <h3>🎯 Tu Demo Personalizada</h3>
+                <p>Nuestro equipo se pondrá en contacto contigo en las próximas <strong>24 horas</strong> para agendar una demostración completamente personalizada y sin costo, donde podrás:</p>
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>Identificar oportunidades específicas en tu negocio</li>
+                    <li>Conocer cómo la automatización puede ahorrarte tiempo y aumentar tus ventas</li>
+                    <li>Explorar cómo nuestras herramientas pueden adaptarse a tus necesidades específicas</li>
+                </ul>
+            </div>
+            
+            <div class="next-steps">
+                <h3>📋 Mientras tanto, te recomendamos:</h3>
+                <ul>
+                    <li>Revisar tus procesos actuales que más tiempo te consumen</li>
+                    <li>Pensar en los puntos donde tus clientes podrían tener mejor experiencia</li>
+                    <li>Preparar cualquier pregunta o duda que tengas</li>
+                    <li>Estar listo para descubrir el potencial de tu empresa</li>
+                </ul>
+            </div>
+            
+            <p class="main-text">
+                Sabemos que tu tiempo es valioso, por eso nos aseguraremos de que nuestra demo sea <strong>relevante, práctica y enfocada en resultados reales</strong> para tu negocio.
+            </p>
+        </div>
+        
+        <div class="contact-info">
+            <h3>¿Tienes alguna pregunta urgente?</h3>
+            <p>No dudes en contactarnos directamente:</p>
+            <p>📧 Email: <a href="mailto:juan@autonomia.mx">juan@autonomia.mx</a></p>
+            <p>📱 WhatsApp: <a href="https://wa.me/+525611096935">+52 56 1109 6935</a></p>
+            <p>🌐 Web: <a href="https://autonomia.mx/">autonomia.mx</a></p>
+        </div>
+        
+        <div class="footer">
+            <p>&copy; 2025 Autonom.IA - Automatización e Inteligencia Artificial para tu negocio</p>
+            <p>México | <a href="#">Política de Privacidad</a> | <a href="#">Condiciones de Servicio</a></p>
+        </div>
+    </div>
+</body>
+</html>
