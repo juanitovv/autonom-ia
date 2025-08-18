@@ -470,5 +470,43 @@
             window.addEventListener('scroll', headerScrollHandler, { passive: true });
         })();
     </script>
+
+    <!-- Chatbot -->
+    <div id="n8n-chat" class="chat-widget"></div>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+	        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+	        createChat({
+		        webhookUrl: 'https://n8n.srv942132.hstgr.cloud/webhook/c9ff1cdd-34e9-486a-a71d-025747890a61/chat',
+                webhookConfig: {
+		            method: 'POST',
+		            headers: {}
+	            },
+                target: '#n8n-chat',
+                mode: 'window',
+                chatInputKey: 'chatInput',
+                chatSessionKey: 'sessionId',
+                loadPreviousSession: true,
+                metadata: {},
+                showWelcomeScreen: false,
+                defaultLanguage: 'es',
+                initialMessages: [
+                    '¡Hola! 👋 Soy Chucho de Autonom.IA',
+                    '¿Tu negocio pierde tiempo en tareas repetitivas?',
+                    'Te puedo mostrar procesos que podrías automatizar, resolver dudas específicas o agendar una demo gratuita.',
+                ],
+                i18n: {
+                    es: {
+                        title: 'Autonom.IA 🚀',
+                        subtitle: "Automatización e IA para tu negocio",
+                        footer: '',
+                        getStarted: 'New Conversation',
+                        inputPlaceholder: 'Escribe tu pregunta o comentario...',
+                    },
+                },
+                enableStreaming: false,
+            });
+    </script>
 </body>
 </html>
