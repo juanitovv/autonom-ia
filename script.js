@@ -466,7 +466,7 @@
             <div style="display:flex;flex-direction:column;align-items:center;">
                 <span style="font-size:1.5rem;display:block;margin-bottom:0.5rem;">⚠️</span>
                 <strong>Hubo un problema al enviar tu información</strong><br>
-                <span style="font-weight:400;">Por favor intenta nuevamente o contáctanos directamente por WhatsApp al +52 55 5611096935</span>
+                <span style="font-weight:400;">Por favor intenta nuevamente o contáctanos directamente por WhatsApp al +52 55 5549658710</span>
             </div>
         `;
     

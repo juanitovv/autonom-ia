@@ -79,7 +79,7 @@
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": "+52-55-5611096935",
+            "telephone": "+52-55-5549658710",
             "contactType": "customer service",
             "availableLanguage": "Spanish"
         }
@@ -417,7 +417,7 @@
                 <div class="footer-section">
                     <h3>Contacto</h3>
                     <p><i class="fas fa-envelope"></i> juan@autonomia.mx</p>
-                    <p><i class="fas fa-phone"></i> +52 56 1109 6935</p>
+                    <p><i class="fas fa-phone"></i> +52 55 4965 8710</p>
                     <p><i class="fas fa-map-marker-alt"></i> Ciudad de México, México</p>
                     <p><i class="fas fa-clock"></i> Lun-Vie: 9:00 - 18:00</p>
                 </div>
@@ -471,43 +471,14 @@
         })();
     </script>
 
-    <!-- Chatbot -->
-    <div id="n8n-chat" class="chat-widget"></div>
-    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css">
-    <script type="module">
-	        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
-
-	        createChat({
-		        webhookUrl: 'https://n8n-n8n.kylnhc.easypanel.host/webhook/c9ff1cdd-34e9-486a-a71d-025747890a61/chat',
-                webhookConfig: {
-		            method: 'POST',
-		            headers: {}
-	            },
-                target: '#n8n-chat',
-                mode: 'window',
-                chatInputKey: 'chatInput',
-                chatSessionKey: 'sessionId',
-                loadPreviousSession: true,
-                metadata: {},
-                showWelcomeScreen: false,
-                defaultLanguage: 'es',
-                initialMessages: [
-                    '¡Hola! 👋 Soy Chucho de Autonom.IA',
-                    '¿Tu negocio pierde tiempo en tareas repetitivas?',
-                    'Te puedo mostrar procesos que podrías automatizar, resolver dudas específicas o agendar una demo gratuita.',
-                ],
-                i18n: {
-                    es: {
-                        title: 'Autonom.IA 🚀',
-                        subtitle: "Automatización e IA para tu negocio",
-                        footer: '',
-                        getStarted: 'New Conversation',
-                        inputPlaceholder: 'Escribe tu pregunta o comentario...',
-                    },
-                },
-                enableStreaming: false,
-            });
-    </script>
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/525549658710" 
+        class="whatsapp-btn" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        aria-label="Chatear por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span>¿Hablamos? 😁</span>
+    </a>
 </body>
 </html>
