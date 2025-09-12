@@ -118,7 +118,7 @@ Editar las variables CSS en `:root` dentro del archivo `styles.css`
 
 Para soporte técnico o consultas sobre el sitio web:
 - Email: villalpandojuancarlos@gmail.com
-- Teléfono: +52 (55) 5549658710
+- Teléfono: +52 (55) 5610245448
 
 ---
 
