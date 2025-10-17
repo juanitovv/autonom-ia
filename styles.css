@@ -656,90 +656,6 @@ img {
     max-width: 600px;
 }
 
-.cta-demo-form {
-    background: #111;
-    border-radius: 1.3rem;
-    padding: 2.5rem 2rem 2rem;
-    max-width: 520px;
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.1rem;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    border: none;
-}
-
-.cta-demo-form input,
-.cta-demo-form select {
-    background: #fff;
-    color: #222;
-    border-radius: 0.8rem;
-    font-size: 1.1rem;
-    border: none;
-    padding: 1.1rem 1.2rem;
-    margin-bottom: 0.5rem;
-    font-family: inherit;
-}
-
-.cta-demo-form input:focus,
-.cta-demo-form select:focus {
-    outline: 2px solid var(--primary-color);
-}
-
-.cta-demo-btn {
-    background: var(--gradient-primary);
-    color: #fff;
-    border-radius: 2rem;
-    font-size: 1.15rem;
-    font-weight: 700;
-    padding: 1.1rem 1.2rem;
-    margin-top: 1rem;
-    box-shadow: none;
-    border: none;
-    display: block;
-    margin: 1rem auto 0 auto;
-    width: 100%;
-    max-width: 420px;
-    min-width: 220px;
-}
-
-.cta-demo-benefits {
-    margin-top: 1.2rem;
-    text-align: center;
-    font-size: 1.05rem;
-    color: #fff;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
-    flex-direction: row;
-    max-width: 520px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-benefit {
-    color: var(--accent-color);
-}
-
-.cta-demo-confirm-msg {
-    background: var(--accent-color);
-    color: #fff;
-    border-radius: 1.2rem;
-    padding: 2.2rem 1.5rem 2rem 1.5rem;
-    text-align: center;
-    font-size: 1.25rem;
-    font-weight: 600;
-    max-width: 480px;
-    margin: 0 auto 1.5rem auto;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
 /* ============================================
    FOOTER
 ============================================ */
@@ -926,12 +842,6 @@ img {
         padding: 2.2rem 0 2.2rem 0;
     }
 
-    .cta-demo-form {
-        max-width: 100%;
-        margin: 0 1rem;
-        padding: 2rem 1.5rem;
-    }
-
     .cta-demo-title {
         font-size: 2rem;
     }
@@ -958,16 +868,6 @@ img {
     .btn {
         padding: 0.8rem 1.5rem;
         font-size: 0.9rem;
-    }
-
-    .cta-demo-form {
-        padding: 1.5rem 1rem;
-    }
-
-    .cta-demo-form input,
-    .cta-demo-form select {
-        padding: 1rem;
-        font-size: 1rem;
     }
 }
 
@@ -1527,5 +1427,32 @@ img {
     
     .whatsapp-btn i {
         font-size: 20px;
+    }
+}
+
+/* Calendly widget: responsive */
+.calendly-inline-widget {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    /* altura base: usa viewport para adaptarse en móvil */
+    height: 70vh;
+    min-height: 480px;
+}
+
+/* Escritorio más amplio: altura fija mayor */
+@media (min-width: 1024px) {
+    .calendly-inline-widget {
+        height: 700px;
+        min-height: 500px;
+    }
+}
+
+/* Tablet / móviles: menos altura pero suficiente para mostrar el iframe */
+@media (max-width: 767px) {
+    .calendly-inline-widget {
+        height: 60vh;
+        min-height: 420px;
     }
 }

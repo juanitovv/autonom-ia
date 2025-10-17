@@ -362,31 +362,10 @@
         <div class="cta-demo-content">
             <h2 class="cta-demo-title">¿Listo para transformar tu negocio?</h2>
             <p class="cta-demo-subtitle">Agenda una demo gratuita de 30 minutos y descubre exactamente cómo automatizar TU negocio</p>
-            <form class="cta-demo-form" id="demoForm">
-                <input type="text" name="nombre" placeholder="Tu nombre completo" required>
-                <input type="email" name="email" placeholder="Tu mejor email" required>
-                <input type="tel" name="telefono" placeholder="WhatsApp (ej: +52 1234 5678)" required pattern="[\+0-9\-\s]{7,20}">
-                <select name="tipo_negocio" required>
-                    <option value="" disabled selected>¿Que tipo de negocio tienes?</option>
-                    <option value="servicios_profesionales">Servicios Profesionales</option>
-                    <option value="ecommerce_retail">E-commerce y Retail</option>
-                    <option value="salud_bienestar">Salud y Bienestar</option>
-                    <option value="restaurantes">Restaurantes y Gastronomía</option>
-                    <option value="otro">Otro</option>
-                </select>
-                <select name="empleados" required>
-                    <option value="" disabled selected>¿Cuántos empleados tienes?</option>
-                    <option value="1-5">1-5</option>
-                    <option value="6-20">6-20</option>
-                    <option value="21-50">21-50</option>
-                    <option value="51-100">51-100</option>
-                    <option value="100+">Más de 100</option>
-                </select>
-                <button type="submit" class="btn btn-primary cta-demo-btn">Quiero mi demo gratuita</button>
-                <div class="cta-demo-benefits">
-                    <span class="cta-benefit">✅ Demo 100% gratuita</span> • <span class="cta-benefit">✅ Sin compromiso</span> • <span class="cta-benefit">✅ Resultados garantizados</span>
-                </div>
-            </form>
+            <!-- Principio del widget integrado de Calendly -->
+            <div class="calendly-inline-widget" data-url="https://calendly.com/juan-autonomia/30min?hide_event_type_details=1&hide_gdpr_banner=1"></div>
+            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+            <!-- Final del widget integrado de Calendly -->
         </div>
     </section>
 
